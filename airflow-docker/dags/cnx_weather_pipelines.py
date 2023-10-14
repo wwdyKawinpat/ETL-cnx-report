@@ -21,7 +21,7 @@ def to_celsius(temp):
     return temp
 
 def open_weather_extract():
-    open_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q=Chiang Mai&appid=6de36a8b0af61ddd72e49e0ed65c4b9e'
+    open_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q=Chiang Mai&appid={API_KEY}'
     open_weather_data = requests.get(open_weather_url)
     open_weather_data_json = open_weather_data.json()
     return open_weather_data_json
@@ -57,7 +57,7 @@ def extract_cnx_pop():
 
 
 def extract_aqi():
-    AQI_TOKEN = 'fc50c0e51d290a65b7dc884895676dda6b196026'
+    AQI_TOKEN = '{API_TOKEN}'
     air_quality_url = f'https://api.waqi.info/feed/chiangmai/?token={AQI_TOKEN}'
     air_quality = requests.get(air_quality_url)
     air_quality_json = air_quality.json()
