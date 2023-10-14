@@ -1,4 +1,4 @@
-# Chiangmai Data Ingestion, Extraction, and Load (ETL) with Apache Airflow
+# Chiangmai Data Extraction, Transfomation and Load (ETL) with Apache Airflow
 ![ETL](https://github.com/wwdyKawinpat/ETL-cnx-report/assets/88372950/db61cb9b-1585-468e-9582-77dc77c7b108)
 
 This project demonstrates how to use Apache Airflow for ingesting Chaingmai Weather data, extracting it, and loading it into a PostgreSQL database.
@@ -10,7 +10,7 @@ This project demonstrates how to use Apache Airflow for ingesting Chaingmai Weat
 
 ## Project Overview
 
-This project focuses on automating the data processing pipeline for ingesting data from Chiangmai, performing necessary extractions, transformations, and loading the data into a PostgreSQL database. Utilizing Apache Airflow, a powerful open-source workflow automation tool, the project enables efficient data management and orchestration.
+This project focuses on automating the data processing pipeline for ingesting data from Chiangmai, performing necessary extractions and ingest data, transformations, and loading the data into a PostgreSQL database. Utilizing Apache Airflow, a powerful open-source workflow automation tool, the project enables efficient data management and orchestration.
 
 **Main Features**
   - **Automated Data Pipeline:**
@@ -136,5 +136,19 @@ with DAG('cnx-weather-pipeline',
     [t3,t4] >> t5
     t5 >> t6
 ```
+DAGs gtaph view.
+![image](https://github.com/wwdyKawinpat/ETL-cnx-report/assets/88372950/8504d37e-2963-4650-90c1-1c652f902d27)
 
+8. Query to check data in Postgres.
+   ```bash
+   SELECT * FROM cnx_report
+   ```
+   
+<!-- Beginning of auto-generated table -->
+   |         timestamp        |    name    |  weather_main | sunrise_date | sunrise_time |  sunset_date |  sunset_time |    temp   | temp_feellike |  temp_max |  temp_min  |  aqi  | population |
+   |------------------------- |----------- |-------------- |------------- |------------- |------------- |------------- |---------- |-------------- |---------- |----------- |------ |----------- |
+   |	2023-10-14 08:11:09.086 | Chiang Mai |	   Clouds    |  2023-10-14  |	  06:17:17   |	2023-10-14	|    18:02:43	 |   30.269  |     35.99     |	 32.779  | 	 29.189   |	  17	|   1202618  |
 
+<!-- End of auto-generated table -->
+
+The final result in postgresql.
