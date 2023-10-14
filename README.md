@@ -136,7 +136,7 @@ with DAG('cnx-weather-pipeline',
     [t3,t4] >> t5
     t5 >> t6
 ```
-DAGs gtaph view.
+DAGs graph view.
 ![image](https://github.com/wwdyKawinpat/ETL-cnx-report/assets/88372950/8504d37e-2963-4650-90c1-1c652f902d27)
 
 8. Query to check data in Postgres.
