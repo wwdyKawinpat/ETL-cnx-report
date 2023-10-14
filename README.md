@@ -1,4 +1,5 @@
 # Chiangmai Data Ingestion, Extraction, and Load (ETL) with Apache Airflow
+![ETL](https://github.com/wwdyKawinpat/ETL-cnx-report/assets/88372950/db61cb9b-1585-468e-9582-77dc77c7b108)
 
 This project demonstrates how to use Apache Airflow for ingesting Chaingmai Weather data, extracting it, and loading it into a PostgreSQL database.
 
